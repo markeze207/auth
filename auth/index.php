@@ -35,14 +35,23 @@
             </div>
         </div>
         <?php else:?>
-            <form action="php/logout.php" method="post">
-                <div class="form">
-                    <h1> Welcome, <?=$_COOKIE['user'] ?></h1>
-                    <div class="input-form-submit-1">
+            <div class="form">
+                <h1> Welcome, <?=$_COOKIE['user'] ?></h1>
+                <form action="change.html">
+                    <div class="change-pass">
+                        <input type="submit" value="Change pass">
+                    </div>
+                </form>
+                <div class="input-form-submit-1">
+                        <a class="button1" href="add.html"><button>Add news <br></button></a>
+                        <a href="php/news.php"><button>News</button></a>
+                </div> 
+                <form action="php/logout.php" method="post">
+                    <div class="input-form-submit-2">
                         <input type="submit" value="Logout">
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         <?php endif;?>
     </div>
 </body>

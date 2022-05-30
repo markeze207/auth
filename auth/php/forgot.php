@@ -21,19 +21,21 @@ function gen_password($length = 6)
 	return $password;
 }
 $password = gen_password(8);
+$pass = md5($password."fdldsxz2456");
 $token = sha1(uniqid($mail, true));
 if (isset($_GET["token"])) {
     $token = $_GET["token"];
-    $info_token = mysqli_fetch_assoc($link->query("SELECT * FROM `verify_pass` WHERE token = '".$token."'"));
-    $link->query("UPDATE `user` SET `password`='".$info_token['password']."' WHERE token = '".$token."'");
-    $link->query("DELETE FROM `verify_pass` WHERE token = '".$token."'");	
-    
+    $info_token = mysqli_fetch_assoc($link->query("SELECT * FROM `user` WHERE token = '".$token."'"));
+    $link->query("UPDATE `user` SET `token`='0',`password`='".$pass."' WHERE token = '".$token."'");
+	echo 'New pass: '.$password.'<br>Redirect - 30 sek';
+	header('Refresh: 30; url=/lillego.ml/code/index.php');
     die();
 }
 if($info_user)  {
-    $link->query("INSERT INTO `verify_pass`(`mail`, `password`,`token`) VALUES ('".$mail."','".$password."','".$token."')");
-    $url = "http://37.230.113.210/lillego.ml/code/forgot.php?token=$token";
+	$link->query("UPDATE `user` SET `token`='".$token."' WHERE mail = '$mail'");
+    $url = "http://37.230.113.210/lillego.ml/code/php/forgot.php?token=$token";
     mail($mail, 'My Subject', 'Подтвердите смену пароля '."'.$url.'");
+	header('Location: /lillego.ml/code/index.php');
 }
 else {
     echo 'no accout';

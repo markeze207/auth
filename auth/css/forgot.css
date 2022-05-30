@@ -140,7 +140,7 @@ section {
 }
 
 
-.forget {
+.back {
   display: flex;
   margin-left: 38px;
   font-size: 11px;
@@ -165,14 +165,5 @@ section {
   cursor: pointer;
 }
 
-
-.new {
-  display: flex;
-  margin-left: 298.3px;
-  font-size: 11px;
-  margin-top: -14.03px;
-  color: #212020;
-  font-weight: 600;
-}
 
 
