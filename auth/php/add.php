@@ -10,6 +10,6 @@ $title = filter_var(trim($_POST['title']));
 $text = filter_var(trim($_POST['text']));
 
 $link->query("INSERT INTO `post`(`name`, `title`, `text`,`date`) VALUES ('$name','$title','$text','$today')");
-header('Location: /lillego.ml/code/php/news.php');
+header('Location: /lillego.ml/code/php/news');
 mysqli_close($link);
 exit();

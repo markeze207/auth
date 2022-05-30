@@ -12,4 +12,4 @@ if(count($info_user) == 0) {
 setcookie('user', $info_user['login'], time() + 3600, "/lillego.ml");
 
 mysqli_close($link);
-header('Location: /lillego.ml/code/index.php');
+header('Location: /lillego.ml/code/index');

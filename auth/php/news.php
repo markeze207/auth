@@ -14,7 +14,7 @@ else {
         <p><?=$result['text']?></p>
         <p>Date <?=$result['date']?><br></p>
     <?}
-    ?><a href="../index.php">Back</a><?
+    ?><a href="../index">Back</a><?
     exit();
 }
 

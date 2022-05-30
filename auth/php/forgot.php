@@ -28,14 +28,14 @@ if (isset($_GET["token"])) {
     $info_token = mysqli_fetch_assoc($link->query("SELECT * FROM `user` WHERE token = '".$token."'"));
     $link->query("UPDATE `user` SET `token`='0',`password`='".$pass."' WHERE token = '".$token."'");
 	echo 'New pass: '.$password.'<br>Redirect - 30 sek';
-	header('Refresh: 30; url=/lillego.ml/code/index.php');
+	header('Refresh: 30; url=/lillego.ml/code/index');
     die();
 }
 if($info_user)  {
 	$link->query("UPDATE `user` SET `token`='".$token."' WHERE mail = '$mail'");
-    $url = "http://37.230.113.210/lillego.ml/code/php/forgot.php?token=$token";
+    $url = "http://37.230.113.210/lillego.ml/code/php/forgot?token=$token";
     mail($mail, 'My Subject', 'Подтвердите смену пароля '."'.$url.'");
-	header('Location: /lillego.ml/code/index.php');
+	header('Location: /lillego.ml/code/index');
 }
 else {
     echo 'no accout';

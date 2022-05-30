@@ -16,4 +16,4 @@ elseif(mb_strlen($pass) < 6 or mb_strlen($pass) > 12) {
 $pass = md5($pass."fdldsxz2456");
 $link->query("INSERT INTO `user`(`mail`, `login`, `password`) VALUES ('$mail','$login','$pass')");
 mysqli_close($link);
-header('Location: /lillego.ml/code/index.php');
+header('Location: /lillego.ml/code/index');

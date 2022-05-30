@@ -16,7 +16,7 @@
         ?>
         <div class="wrapper">
             <div class="container">
-                <form action="php/login.php" method="post">
+                <form action="php/login" method="post">
                     <div class="form">
                         <h1>genius.site</h1>
                         <div class="input-form-login">
@@ -25,8 +25,8 @@
                         <div class="input-form-pass">
                             <input required type="password" placeholder="Password" name="pass">
                         </div>
-                        <a href="forgot.html" class="forget">Forgot password??</a>
-                        <a href="new.html" class="new">Don't have an account?</a>
+                        <a href="forgot" class="forget">Forgot password??</a>
+                        <a href="new" class="new">Don't have an account?</a>
                         <div class="input-form-submit">
                             <input type="submit" value="Login">
                         </div>
