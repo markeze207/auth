@@ -11,7 +11,7 @@
     <div class="root">
         <div class="wrapper">
             <div class="container">
-                <form action="php/add" method="post">
+                <form action="php/add" enctype="multipart/form-data" method="post">
                     <div class="form">
                         <h1>genius.site</h1>
                         <div class="input-form-login">
@@ -20,8 +20,11 @@
                         <div class="input-form-pass">
                             <input required placeholder="Subtitle" name="text">
                         </div>
+                        <div class="input-form-photo">
+                            <input type="file" accept="image/*" name="file">
+                        </div>
                         <a href="index" class="back">Назад</a>
-                        <div class="input-form-submit">
+                        <div class="input-form-submit-post">
                             <input type="submit" value="Post">
                         </div>
 

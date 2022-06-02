@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
+    <? header('Content-type: text/html; charset=UTF-8');?>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,16 +38,16 @@
         <?php else:?>
             <div class="form">
                 <h1> Welcome, <?=$_COOKIE['user'] ?></h1>
-                <form action="change.html">
+                <form action="change">
                     <div class="change-pass">
                         <input type="submit" value="Change pass">
                     </div>
                 </form>
                 <div class="input-form-submit-1">
-                        <a class="button1" href="add.html"><button>Add news <br></button></a>
-                        <a href="php/news.php"><button>News</button></a>
+                        <a class="button1" href="add"><button>Add news <br></button></a>
+                        <a href="php/news"><button>News</button></a>
                 </div> 
-                <form action="php/logout.php" method="post">
+                <form action="php/logout" method="post">
                     <div class="input-form-submit-2">
                         <input type="submit" value="Logout">
                     </div>

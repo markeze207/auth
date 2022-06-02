@@ -243,3 +243,33 @@ section {
   color: #353333;
   font-weight: 600;
 }
+
+.input-form-photo {
+  margin-top: 10px;
+  margin-left: 46px;
+}
+
+.input-form-photo input {
+  font-family: "Inter",sans-serif;
+  font-weight: 550;
+  color: #353333;
+}
+
+.input-form-submit-post {
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.input-form-submit-post input {
+	background: black;
+  color: white;
+  width: 82px;
+  height: 33px;
+  cursor: pointer;
+}
+
+.photo img {
+  max-width: 50px;
+}
